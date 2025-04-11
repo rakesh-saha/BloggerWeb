@@ -1,0 +1,66 @@
+button {
+    background-color: #00a2ed;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #00c1cf;
+  }
+  
+  
+  nav {
+    display: flex;
+    background-color: #0000003b;
+    align-items:right;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-between;
+    }
+  
+  nav div ul {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+  }
+  
+  nav div ul li {
+    margin: 0 15px;
+    padding: 20px 0px;
+  }
+  
+  nav div ul li a {
+    text-decoration: none;
+    
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav div ul li a:hover {
+    cursor: pointer;
+    color: #08c1ff;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    border: none;
+    height: 15px;
+    margin: 15px;
+    border-radius: 4px;
+    width: 270px;
+  }
+
+  .logo img{
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-left: 5px;
+  }
