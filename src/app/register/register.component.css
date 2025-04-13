@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,8 @@
     font-family: Arial, sans-serif;
   }
 
-  .login-container {
+
+.register-container{
     background-color: white;
     padding: 40px;
     border-radius: 10px;
@@ -14,26 +14,23 @@
     width: 100%;
     max-width: 400px;
     text-align: center;
-  }
 
-  .login-header {
+}
+.register-header{
     font-size: 28px;
     margin-bottom: 30px;
     color: #333;
-  }
-  
+}
 
-  .login-form input {
+.register-form input{
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc ;
     border-radius: 6px;
     font-size: 16px;
-  }
-  
-
-  .login-form button {
+}
+.register-form button{
     width: 100%;
     padding: 12px;
     background-color: #4facfe;
@@ -42,19 +39,19 @@
     font-size: 16px;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-form button:hover {
+    transition: background-color 0.7s ease;
+}
+
+.register-form button:hover {
     background-color: #002d54;
   }
-  
-  .register-link{
+
+  .login-link{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 5px;
   }
-  .register-link a{
+  .login-link a{
     margin-left: 5px;
   }

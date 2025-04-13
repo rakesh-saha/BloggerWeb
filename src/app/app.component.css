@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   
-  body {
+  .navber {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(rgba(2, 91, 255, 0.5),rgba(255, 0, 0, 0.7)),url('../../public/images/blog_bg.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -82,7 +82,7 @@
   }
   
   
-  main {
+  .content {
     display: flex;
     justify-content: center;
     align-items: center;

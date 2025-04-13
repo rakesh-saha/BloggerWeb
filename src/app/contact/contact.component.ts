@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-contact',
   imports: [RouterModule],
   standalone: true,
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.css'
 })
-export class LoginComponent {
+export class ContactComponent {
 
 }

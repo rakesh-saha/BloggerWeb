@@ -1,3 +1,11 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 button {
     background-color: #00a2ed;
     color: white;
@@ -5,19 +13,21 @@ button {
     cursor: pointer;
     font-weight: bold;
     border-radius: 15px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.7s ease;
     height: 40px;
-    margin-top: 10px;
+    padding: 10px;
+    margin: 20px 20px 0px 0px;
   }
   
   button:hover {
-    background-color: #00c1cf;
+    background-color: #002d54;
   }
   
   
   nav {
     display: flex;
-    background-color: #0000003b;
+    background-color: #00000074;
+    height: 80px;
     align-items:right;
     flex-direction: row;
     overflow: hidden;
@@ -31,15 +41,18 @@ button {
   }
   
   nav div ul li {
-    margin: 0 15px;
+    margin: 10px 10px;
     padding: 20px 0px;
+    border-color: white;
   }
   
   nav div ul li a {
     text-decoration: none;
-    
     color: white;
     font-weight: bold;
+    border:1px solid #fff;
+    padding: 7px;
+    border-radius: 10px;
     transition: color 0.3s ease;
   }
   
@@ -51,16 +64,15 @@ button {
   .search-bar {
     padding: 10px;
     border: none;
-    height: 15px;
-    margin: 15px;
+    height: 30px;
+    margin: 25px 5px;
     border-radius: 4px;
     width: 270px;
   }
 
   .logo img{
-    height: 50px;
+    height:60px;
     width: auto;
     border-radius: 50%;
-    margin-top: 25px;
-    margin-left: 5px;
+    margin:10px
   }
