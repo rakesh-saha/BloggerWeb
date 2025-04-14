@@ -1,10 +1,10 @@
 <div class="register-container">
     <h2 class="register-header">Register</h2>
-    <form class="register-form">
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Log In</button>
+    <form (ngSubmit)="onSubmit()" class="register-form">
+        <input type="text" name="name" [(ngModel)]="name"  placeholder="Name" required>
+        <input type="email" name="email" [(ngModel)]="email" placeholder="Email" required>
+        <input type="password" name="password" [(ngModel)]="password" placeholder="Password" required>
+        <button type="submit">Register</button>
     </form>
     <div class="login-link">
         <h4 style="color: black;">Already have account :</h4><a routerLink="/login">Login</a>

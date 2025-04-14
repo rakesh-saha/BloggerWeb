@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
     {path: "",
@@ -28,6 +29,10 @@ export const routes: Routes = [
     {
         path: "contact",
         component:ContactComponent
+    },
+    {
+        path: "dashboard",
+        component:DashboardComponent
     }
     
 ];
