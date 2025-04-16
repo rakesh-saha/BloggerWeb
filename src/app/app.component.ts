@@ -21,6 +21,9 @@ export class AppComponent {
     this.appState.isLoggedIn$.subscribe(status => {
       this.isLoggedIn = status;
       if(this.isLoggedIn==true){
+        this.router.navigate(['/dashboard']);
+      }
+      else{
         this.router.navigate(['/home']);
       }
     });

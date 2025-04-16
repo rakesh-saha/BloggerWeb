@@ -17,7 +17,15 @@ export class LoginComponent {
 
   }
   onSubmit(){
-    this.appState.setLoginStatus(true)
+    if(this.email=="" || this.password==""){
+      alert("Fields can not be empty!!");
+    }
+    else if(this.email=="rakeshxyz62@gmail.com" && this.password=="123"){
+      this.appState.setLoginStatus(true)
+
+    }else{
+      alert("You are not a part of our Community!!\nPlease Register!!");
+    }
     console.log("Email: "+this.email+"  Password: "+this.password)
   }
 }
