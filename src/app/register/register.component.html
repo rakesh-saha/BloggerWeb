@@ -1,5 +1,6 @@
 <div class="register-container">
     <h2 class="register-header">Register</h2>
+    <h3 class="emptyField" *ngIf="emptyField">Please fill all the data!!</h3>
     <form (ngSubmit)="onSubmit()" class="register-form">
         <input type="text" name="name" [(ngModel)]="name"  placeholder="Name" required>
         <input type="email" name="email" [(ngModel)]="email" placeholder="Email" required>

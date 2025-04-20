@@ -2,6 +2,13 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppStateService } from '../app-state.service';
+import { HttpClient} from '@angular/common/http';
+
+interface LoginUser {
+  email: string;
+  name: string;
+  password: string;
+}
 
 @Component({
   selector: 'app-login',
@@ -13,19 +20,30 @@ import { AppStateService } from '../app-state.service';
 export class LoginComponent {
   email: string =''
   password: string =''
-  constructor(private appState: AppStateService){
+  loginUrl = 'http://localhost:8080/login';
+  constructor(
+    private appState: AppStateService,
+    private http:HttpClient
+  ){}
 
-  }
-  onSubmit(){
-    if(this.email=="" || this.password==""){
-      alert("Fields can not be empty!!");
-    }
-    else if(this.email=="rakeshxyz62@gmail.com" && this.password=="123"){
-      this.appState.setLoginStatus(true)
-
-    }else{
-      alert("You are not a part of our Community!!\nPlease Register!!");
-    }
-    console.log("Email: "+this.email+"  Password: "+this.password)
+  onSubmit() {
+    const loginData = {
+      email: this.email,
+      password: this.password,
+      name: '' 
+    };
+  
+    this.http.post<LoginUser>(this.loginUrl, loginData).subscribe({
+      next: (response) => {
+        this.appState.setLoginStatus(true);
+      },
+      error: (err) => {
+        if (err.status === 401) {
+          alert("Email or password is wrong!");
+        } else {
+          alert("Something went wrong!");
+        }
+      }
+    });
   }
 }

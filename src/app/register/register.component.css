@@ -22,6 +22,11 @@
     color: #333;
 }
 
+.emptyField{
+  color: red;
+  margin: 3px;
+}
+
 .register-form input{
     width: 100%;
     padding: 12px;
