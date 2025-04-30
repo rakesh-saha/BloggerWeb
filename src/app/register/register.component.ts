@@ -23,7 +23,8 @@ interface LoginUser {
 export class RegisterComponent {
   name: string = '' ;
   email: string = '' ;
-  password: string = '' ; 
+  password: string = '' ;
+  fieldName:String=''
   emptyField:boolean=false;
   
   constructor(private http:HttpClient){}
@@ -31,9 +32,18 @@ export class RegisterComponent {
   
 
   onSubmit(){
-
-    if(this.name=="" || this.email=="" || this.password==""){
+    if(this.name==''){
       this.emptyField=true;
+      this.fieldName='Name';
+      return;
+    }
+    else if(this.email==''){
+      this.emptyField=true;
+      this.fieldName='Email';
+      return;
+    }else if(this.password==''){
+      this.emptyField=true;
+      this.fieldName='Password';
       return;
     }else{
       this.emptyField=false;

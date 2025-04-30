@@ -1,5 +1,5 @@
 <div *ngIf="!isLoggedIn" class="navber">
-    <app-navbar></app-navbar>
+    <app-navbar class="nav"></app-navbar>
 
     <div class="content">
         <router-outlet></router-outlet>
@@ -7,9 +7,8 @@
 </div>
 
 <div *ngIf="isLoggedIn" class="navber">
-    <app-login-nav></app-login-nav>
+    <app-login-nav class="nav"></app-login-nav>
     <div class="content">
         <router-outlet></router-outlet>
     </div>
 </div>
-<h1> Logged In Status: {{isLoggedIn}}</h1>

@@ -15,6 +15,7 @@ export class LoginNavComponent {
   }
   OnLogout(){
     console.log("Logged out!!");
+    localStorage.clear();
     this.AppState.setLoginStatus(false);    
   }
 }

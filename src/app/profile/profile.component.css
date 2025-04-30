@@ -1,0 +1,121 @@
+.profile-wrapper {
+  max-width: 80vb;
+  margin: 2rem auto;
+  max-height: fit-content; 
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #21fffb97;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  
+}
+
+.profile-image-container {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4a90e2;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.textBox {
+  background-color: #00e5ff;
+  border: 1px solid black;
+  padding: 0px 5px;
+  margin: 0px 5px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.textBox:hover {
+  transform: scale(1.05);
+}
+
+.addInterest {
+  border: 1px solid black;
+  padding: 0px 10px;
+  margin: 0px 5px;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  background-color: #00e5ff;
+}
+
+.profile-details h2 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.profile-details div {
+  display: flex;
+  flex-direction: row;
+  margin: 0.4rem 0;
+  color: #555;
+  padding: 5px;
+}
+
+.interests {
+  background-color: #00ff26;
+}
+
+.interest-items {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.interest-items li {
+  display: block;
+  background-color: #e1ecf4;
+  color: #39739d;
+  padding: 0.4rem 0.8rem;
+  margin: 0.3rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 18px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.updateButton {
+  margin: 10px;
+}
+
+.updateButton button {
+  padding: 5px;
+  border-radius: 10px;
+  min-width: 70px;
+  width: max-content;
+  height: 40px;
+  cursor: pointer;
+  background-color: #00e5ff;
+
+}
+
+.updateButton button:hover {
+  transform: scale(1.07);
+
+  background-color: #9cfaff;
+
+}

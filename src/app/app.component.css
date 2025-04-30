@@ -6,10 +6,12 @@
   
   .navber {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(rgba(2, 91, 255, 0.5),rgba(255, 0, 0, 0.7)),url('../../public/images/blog_bg.jpg') no-repeat center center fixed;
-    background-size: cover;
     overflow: hidden;
     color: #fff;
+  }
+  .nav{
+    top: 0px;
+    position: sticky;
   }
   
   .content {
@@ -17,6 +19,6 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    height: 100vb;
+    /* height: 100vb; */
     padding: 10px;
   }

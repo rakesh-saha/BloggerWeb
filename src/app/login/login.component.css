@@ -21,7 +21,10 @@
     margin-bottom: 30px;
     color: #333;
   }
-  
+  .emptyField{
+    color: red;
+    margin: 3px;
+  }
 
   .login-form input {
     width: 100%;
