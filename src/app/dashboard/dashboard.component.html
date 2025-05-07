@@ -3,11 +3,11 @@
     <!-- Left Sidebar -->
     <div class="sidebar-left">
       <div class="profile-card">
-        <img src="images/profile-photo.png" alt="Profile Photo" class="profile-photo">
-        <h2 class="profile-name">John Doe</h2>
-        <p class="profile-address">123 Main St, City</p>
-        <p class="profile-contact">Phone: (123) 456-7890</p>
-        <p class="profile-about">Passionate traveler and photographer. Sharing moments from life!</p>
+        <img [src]="profileImage || 'images/profile-image.jpg'" alt="Profile Photo" class="profile-photo">
+        <h2 class="profile-name">{{name}}</h2>
+        <p class="profile-address">Email: {{email}}</p>
+        <p class="profile-contact">Phone: {{phone}}</p>
+        <p class="profile-about">About: {{about}}</p>
       </div>
     </div>
 

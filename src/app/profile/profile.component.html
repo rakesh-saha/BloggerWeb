@@ -24,16 +24,16 @@
     
     <div class="interests">
       <strong>Interests:</strong>
-      <div *ngIf="!isReadonly">
+      <p *ngIf="!isReadonly">
         <input class="textBox" placeholder="Playing Games" type="text" [(ngModel)]='addInterest'>
         <button class="addInterest" (click)="addMyInterest()">add</button>
-      </div>
+      </p>
     </div>
-      <ul class="interest-items">
+      <div class="interest-items">
         <li  *ngFor="let interest of interests; let i = index">{{ interest }}
           <button *ngIf="!isReadonly" class="remove-btn" (click)="removeInterest(i)">x</button>
         </li>
-      </ul>
+      </div>
       
     
   </div>

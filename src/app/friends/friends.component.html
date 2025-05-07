@@ -1,0 +1,30 @@
+<div *ngIf="loading()">
+  <h2>Loading.....</h2>
+</div>
+<div *ngIf="!loading()" class="friend-fragment">
+  <div class="pageNumber">
+    <button (click)="pageChange(oneMinus)">&lt;</button>
+    <h3>{{pageNum}}</h3>
+    <button (click)="pageChange(onePlus)">&gt;</button>
+  </div>
+    <div 
+      class="friend-card"
+      *ngFor="let friend of friends" 
+    >
+      <img
+        [src]="friend.profileImage || '/images/profile-image.jpg'"
+        class="profile-image"
+        alt="Profile Image"
+      />
+      <div class="friend-info">
+        <h3>{{ friend.name }}</h3>
+        <button
+          [ngClass]="{ following: friend.isFollowing }"
+          (click)="toggleFollow(friend)"
+        >
+          {{ friend.isFollowing ? 'Cancel' : 'Follow' }}
+        </button>
+      </div>
+    </div>
+  </div>
+  

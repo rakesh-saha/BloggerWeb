@@ -1,142 +1,150 @@
 /* Basic reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Layout container */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout container */
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 97vw;
+  font-family: Arial, sans-serif;
+}
+
+/* Left Sidebar */
+.sidebar-left {
+  width: 20%;
+  background-color: #4bffa56d;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-card img {
+  border: 2px solid white;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.profile-address,
+.profile-contact,
+.profile-about {
+  color: rgb(0, 0, 0);
+
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Main Content */
+.main-content {
+  width: 60%;
+  padding: 20px;
+  background-color: #00ffe5a4;
+  overflow-y: auto;
+}
+
+.content-heading {
+  font-size: 20px;
+  color: rgb(0, 4, 255);
+  margin: 20px 0 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.story {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.photo-gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.photo {
+  width: 150px;
+  height: 100px;
+  border: 2px solid black;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.video-gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.video {
+  width: 200px;
+  height: 120px;
+}
+
+/* Right Sidebar */
+.sidebar-right {
+  width: 20%;
+  background-color: #4bffa56d;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar-heading {
+
+  color: aqua;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.profile-list,
+.blog-list {
+  list-style: none;
+}
+
+.profile-item,
+.blog-item {
+  color: rgb(192, 255, 255);
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.sidebar-left,
+.sidebar-right,
+.main-content {
+  margin: 1px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
   .dashboard-container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width:fit-content;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(255, 0, 0, 0.3),rgba(0, 0, 0, 0.9));
+    flex-direction: column;
   }
-  
-  /* Left Sidebar */
-  .sidebar-left {
-    width: 20%;
-    background-color: #ff30305d;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .profile-card {
-    text-align: center;
-  }
-  .profile-card img{
-    border: 2px solid white;
-  }
-  
-  .profile-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  
-  .profile-name {
-    color: aqua;
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  
-  .profile-address,
-  .profile-contact,
-  .profile-about {
-    color: rgb(0, 196, 196);
 
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  
-  /* Main Content */
+  .sidebar-left,
+  .sidebar-right,
   .main-content {
-    width: 60%;
-    padding: 20px;
-    background-color: #0000002e;
-    overflow-y: auto;
+    width: 100%;
   }
-  
-  .content-heading {
-    font-size: 20px;
-    color:rgb(0, 255, 208);
-    margin: 20px 0 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-  
-  .story {
-    color:rgb(30, 255, 0);
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  .photo-gallery {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
-  .photo {
-    width: 150px;
-    height: 100px;
-    border: 2px solid black;
-    object-fit: cover;
-    border-radius: 6px;
-  }
-  
-  .video-gallery {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-  
-  .video {
-    width: 200px;
-    height: 120px;
-  }
-  
-  /* Right Sidebar */
-  .sidebar-right {
-    width: 20%;
-    background-color: #ff20da85;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .sidebar-heading {
-
-    color: aqua;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .profile-list,
-  .blog-list {
-    list-style: none;
-  }
-  
-  .profile-item,
-  .blog-item {
-    color: rgb(192, 255, 255);
-    font-size: 14px;
-    margin-bottom: 8px;
-    cursor: pointer;
-  }
-  
-  /* Responsive tweaks */
-  @media screen and (max-width: 768px) {
-    .dashboard-container {
-      flex-direction: column;
-    }
-    .sidebar-left,
-    .sidebar-right,
-    .main-content {
-      width: 100%;
-    }
-  }
-  
+}

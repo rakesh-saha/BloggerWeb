@@ -1,5 +1,5 @@
 .profile-wrapper {
-  max-width: 80vb;
+  max-width: 80vw;
   margin: 2rem auto;
   max-height: fit-content; 
   padding: 2rem;
@@ -68,26 +68,29 @@
   padding: 5px;
 }
 
-.interests {
-  background-color: #00ff26;
-}
+
 
 .interest-items {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+
 .interest-items li {
-  display: block;
+  display: flex;
+  flex-direction: row;
   background-color: #e1ecf4;
   color: #39739d;
   padding: 0.4rem 0.8rem;
+  width: fit-content;
   margin: 0.3rem;
   border-radius: 20px;
   font-size: 0.9rem;
-
+  white-space: nowrap; 
+  align-items: center; 
 }
+
 
 .remove-btn {
   background: transparent;

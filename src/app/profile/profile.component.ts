@@ -21,10 +21,25 @@ interface UserProfile {
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
-  constructor(private http: HttpClient, private changeDetectorRef: ChangeDetectorRef) { }
-  ngOnInit(): void {
-    this.email = 'rakesh@gmail.com';
+export class ProfileComponent{
+  constructor(private http: HttpClient, private changeDetectorRef: ChangeDetectorRef) { 
+    const storedEmail = localStorage.getItem("email");
+    if (storedEmail) {
+      this.email = storedEmail;
+      this.getProfile(this.email).subscribe({
+        next: (res) => {
+          console.log('Fetch successfully:', res);
+          this.name = res.name;
+          this.profileImage = res.profileImage;
+          this.email = res.email;
+          this.phone = res.phone;
+          this.about = res.about;
+          this.interests = res.interests || [];
+          this.changeDetectorRef.detectChanges();
+        },
+        error: (err) => console.error('Fetch failed:', err),
+      });
+    }
   }
 
   profileImage: string | ArrayBuffer | null = null;
@@ -40,9 +55,14 @@ export class ProfileComponent implements OnInit {
   addInterest: string = ''
 
   addMyInterest() {
-    if(this.addInterest!="")
-    this.interests.push(this.addInterest);
-    this.addInterest="";
+    const len = this.addInterest.length
+    if (len > 35) {
+      alert("Don't enter more than  35 character! (You entered " + len + " character.)");
+      return;
+    }
+    if (this.addInterest != "")
+      this.interests.push(this.addInterest);
+    this.addInterest = "";
   }
   removeInterest(index: number) {
     this.interests.splice(index, 1);
@@ -66,8 +86,8 @@ export class ProfileComponent implements OnInit {
   }
 
   triggerFileInput(inputElement: HTMLInputElement): void {
-    if(this.isReadonly==false)
-    inputElement.click();
+    if (this.isReadonly == false)
+      inputElement.click();
   }
   profileUpdate() {
     const userProfile: UserProfile = {
@@ -86,19 +106,6 @@ export class ProfileComponent implements OnInit {
       });
       this.updateButton = 'Edit';
     } else {
-      this.getProfile(this.email).subscribe({
-        next: (res) => {
-          console.log('Fetch successfully:', res);
-          this.name = res.name;
-          this.profileImage = res.profileImage;
-          this.email = res.email;
-          this.phone = res.phone;
-          this.about = res.about;
-          this.interests = res.interests;
-          this.changeDetectorRef.detectChanges();
-        },
-        error: (err) => console.error('Fetch failed:', err),
-      });
       this.updateButton = 'Update';
       this.isReadonly = !this.isReadonly;
     }

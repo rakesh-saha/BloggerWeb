@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FriendsComponent } from './friends/friends.component';
 
 export const routes: Routes = [
     {path: "",
@@ -34,6 +35,10 @@ export const routes: Routes = [
     {
         path: "dashboard",
         component:DashboardComponent
+    },
+    {
+        path: "friends",
+        component:FriendsComponent
     },
     {
         path: "profile",
